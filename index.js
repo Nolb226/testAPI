@@ -19,5 +19,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/feed', feedRoutes);
-
-app.listen(8080);
+const port = process.env.PORT || 8080;
+app.listen(port, function () {
+	console.log(`Listening on ${port}`);
+});
